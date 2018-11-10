@@ -1,0 +1,127 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% How to use writeLaTeX:
+%
+% You edit the source code here on the left, and the preview on the
+% right shows you the result within a few seconds.
+%
+% Bookmark this page and share the URL with your co-authors. They can
+% edit at the same time!
+%
+% You can upload figures, bibliographies, custom classes and
+% styles using the files menu.
+%
+% If you're new to LaTeX, the wikibook is a great place to start:
+% http://en.wikibooks.org/wiki/LaTeX
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{tufte-handout}
+
+%\geometry{showframe}% for debugging purposes -- displays the margins
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[affil-it]{authblk}
+\usepackage{stmaryrd}
+\usepackage{marvosym}
+\usepackage[normalem]{ulem}
+\usepackage{soul}
+\usepackage{tabularx}
+\usepackage{ marvosym }
+\usepackage{enumitem}
+
+\newtheorem{definition}{Definition}
+
+% Set up the images/graphics package
+\usepackage{graphicx}
+\setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+\graphicspath{{graphics/}}
+
+\title{{\bf{A Dimensional View towards Vagueness} } % Title
+\thanks{A talk for Logic and Engineering of Natural Language Semantics 15 (LENLS 15), Hiyoshi Campus of Keio University, Yokohama, Japan. }
+}
+ % Subtitle
+
+\author{\textsc{Shimpei Endo
+\thanks{Master of Logic, ILLC, Unviersity of Amsterdam.
+My main interests are metaphysics and logic(s), particularly, modal realism and semantics for non-classical modal logics.
+\Letter \url{endoshimpeiendo@gmail.com}
+}
+}
+}
+
+\date{November 14, 2018 (Wed) 13:00-13:30 (incl. discussion)} % Date
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Print the title section
+
+\begin{abstract}
+We should see \emph{vagueness} from a \emph{dimensional} perspective.
+I argue that my solution is good but do not claim that others are wrong.
+Rather, my dimensional view provides a formal platform on which discussions make sense.
+\end{abstract}
+
+\newthought{Vagueness and sorites paradox revisited.}
+Most verbal expressions are vague.
+You need to face vagueness at least when you want to analyze languages via logic. An ordinal predicate such as ``is bald'' or ``is a heap'' leads to a well known paradox called \emph{sorites paradox}.
+
+\newthought{What is Sorites paradox
+\footnote{Also known as paradox of heaps, paradox of baldman or \emph{little-by-little argument}. Although each of these clauses seems to be plausible, combining them leads to a contradiction.
+}
+?}
+
+\begin{description}
+\itemsep0em
+\item	[Obviously bald case:] $M \vDash B(0)$. A man with no hair is surely bald
+\footnote{
+$M$ is an arbitrary model. $M \vDash \phi$ is read as $\phi$ holds under a model $M$.
+We employ a language which only contains a baldness property $B$. $B(x)$ is read as "$x$ is bald".
+}.
+\item	[Obviously non-bald case:] $M \vDash \neg B (2,000,000)$.
+\emph{A man with 200000 hairs is surely \emph{not} bald.}
+
+\item	[\emph{Tolerance Principle}:] If $M \vDash x \sim_{B} y$ and $M \vDash B(x)$, then $M \vDash B(y)$.
+\emph{If two things $x$ and $y$ are indifferent (i.e. similar) to each other with respect to a property $B$, then $B(x)$ promises $B(y)$.
+\footnote{
+With $B$ a property,
+$x \sim_{B} y$ iff $\vDash B(x) \Leftrightarrow \vDash B(y)$ read as "x is similar to y with respect to B-ness".
+Its negation is defined as follows: $x \not \sim_{B} y$ if and only if  $\vDash B(x) \not \Leftrightarrow \vDash B(y)$.
+}
+}
+
+\item	[Bridge:] $M \vDash \exists 0 \exists 1, ... , \exists i_{\in I}, ... \exists 2,000,000
+:
+0$
+$\sim_{B} 1 \sim_{B} ... \sim_{B} 1,999,999 \sim_{B} 2,000,000$.
+\emph{There exists a stream of similarity relation from a small enough ($0$) to a large enough ($2,000,000$).}
+
+\noindent\rule{10cm}{0.4pt}
+
+\item [Unwelcome conclusion] $\vDash \neg B (2,000,000)$  .
+\emph{A man with 20000 hairs turns out to be bald.}
+$\blacksquare$
+
+\end{description}
+
+\newthought{Many solutions have been suggested} for sorites paradox.
+To name a few popular ones:
+\emph{Epistemicists} (e.g. Williamson) points out that tolerance assumption is questionable: i.e. there exists a threshold but we have epistemic limitation to know where it is.
+\emph{Supervaluationists} (e.g. Fine) rather revises the \emph{logic} working behind it, accepting truth-value \emph{gap}.
+
+\newthought{See things dimensionally.}
+We are already familiar with the dimensional perspective.
+We see things not directly in a three-dimensioal structure but in a two-dimensinoal structure (as our retina does).
+
+\newthough{Formalization.}
+
+\newthought{Let us do some baseball.}
+
+\newthought{Return to Sorites.}
+
+\pagebreak
+
+\bibliographystyle{plain}
+\bibliography{Mendeley}
+\end{document}
