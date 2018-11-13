@@ -29,6 +29,7 @@
 \usepackage{ marvosym }
 \usepackage{enumitem}
 \usepackage{setspace}
+\usepackage{bm}
 
 \newtheorem{definition}{Definition}
 
@@ -63,13 +64,11 @@ My main interests are metaphysics and logic(s), particularly, modal realism and 
 We should see \emph{vagueness} from a \emph{dimensional} perspective.
 I argue that my solution is good but do \emph{not} claim that others are wrong.
 Rather, my dimensional view provides a formal platform on which the disputes are possible.
-
-\noindent \textbf{Keywords:} vagueness, sorites, dimensions
 \end{abstract}
 
 \newthought{Vagueness revisited.}
 Most verbal expressions are vague.
- An ordinal predicate such as ``is bald'' or ``is a heap'' leads to a well known paradox called \emph{sorites paradox}.
+ An ordinal predicate such as ``is bald'' or ``is a heap'' leads to a paradox known as \emph{sorites paradox}.
 \footnote{Also known as paradox of heaps, paradox of baldman or \emph{little-by-little argument}. Combining these seemingly plausible assumtoions leads to a contradiction. See:
 \cite{Hyde2011-HYDTSP}
 %\cite{Sainsbury1995}
@@ -80,19 +79,19 @@ Most verbal expressions are vague.
 \begin{description}
 \itemsep0em
 
-\item	[Obviously non-bald case:] A man with 200000 hairs is surely \emph{not} bald.
+\item	[Obviously non-bald case:] A man with 2,000,000 hairs is surely \emph{not} bald.
 
 \item	[Obviously bald case:] A man with no hair is surely bald
 
 \item	[Tolerance Principle:]
-Pulling a single hair does not effect baldness.
+Pulling a single hair does not make anyone any non-bald person into a bald one.
 \begin{spacing}{0}
 
 \noindent\rule{10cm}{0.4pt}
 \end{spacing}
 
 \item [Unwelcome conclusion:]
-A man with $2,000,000$ hairs is bald.
+A man with 2,000,000 hairs is bald.
 $\blacksquare$
 
 \end{description}
@@ -103,24 +102,25 @@ I do not argue that they are all wrong and mine is the only possible or the most
 We are already familiar with the dimensional perspective.
 We see things not directly in a three-dimensioal structure but in a two-dimensinoal structure (as our retina does).
 
+
 \newthought{Formalization.}
 Technically speaking, absence and abundance of information are written in terms of \emph{projection functions} on a dimensional structure.
 
 \begin{definition}[Dimensional structure]
 Let $X_i$ a space (set).
-A dimensional structure $M$ is defined as follows:
-\[M^{i} = \prod_{i \in I} X_i.
-\]
+A dimensional structure $M$ is defined as
+$M = \prod_{i \in I} X_i.$
 \end{definition}
 
 \begin{definition}[Predicates and objects]
-Let $P \in PRED$ be a predicate and $x \in OBJ$ be an object.
+Let $P \in PRED$ be a predicate and $o \in OBJ$ be an object.
 Within a dimensional structure $M$,
-a predicate $P$ is a subset of $M$, written as $\llbracket P \rrbracket^{M} \subseteq M$ and an object $x$ is a element of $M$, $x \subseteq M$.
+a predicate $P$ is a subset of $M$, written as $\llbracket P \rrbracket^{M} \subseteq M$. An object $x$ is also a subset of $M$, $o \subseteq M$.
 \end{definition}
 
 \begin{definition}[Projection]
-Fix $j \in I$. Note $x = \{x_0 \in X_0, x_1 \in X_1, ... , x_j \in X_j, ...\}$.
+\footnote{There are many other possible (and expressive) projections (cf. projective geometry). This simple one is used just for  the sake of explanation. }
+Let $x = \{x_0 \in X_0, x_1 \in X_1, ... , x_j \in X_j, ...\}$.
 Consider a dimensional structure $M^{i} = \prod_i X_i$.
 Pick an arbitrary $j \in I$.
 A projection $f_j: M \mapsto \Downarrow_j M$ returns $f_{j}(x)= \Downarrow_{j}x = \{x_0 \in X_0, x_1 \in X_1, ... , x_{j-1} \in X_{j-1}, x_{j+1} \in X_{j+1}, ...\}$.
@@ -131,27 +131,35 @@ $M \models P(x)$ if and only if $x \subseteq \llbracket P \rrbracket$.
 \end{definition}
 
 \newthought{Demonstration: baseball.}
+\footnote{
+\begin{tabular}{lllllll}
+$\mathbf{M}$        & P1 & P2 & P3 & P4 & P5 & \textbf{D1}  \\
+Fileding & +  & +  & +  & ?  & -  &     \\
+Hitting  & +  & -  & ?  & +  & -  &     \\
+Running  & +  & +  & +  & ?  & -  &     \\
+\textbf{D2}       &    &    &    &    &    &
+\end{tabular}
+
+\vspace{2mm}
+\hspace{4mm}
+{\Large $\Downarrow_{D^*}$}
+\vspace{2mm}
+
+\begin{tabular}{llllll}
+$\Downarrow \mathbf{M}$ & P1 & P2 & P3 & P4 & P5  \\
+In  total                  & +  & ?  & +  & +  & -
+\end{tabular}
+}
+
 We reach vagueness when we consider too little (\emph{absence})
 Suppose a great batter but horrible field player. If we evaluate her/him as a whole, according to our function, s/he is both good and non-good.
  and when we consider too much (\emph{abundance}).
 Our (once fixed) evaluation is often cancelled after considering another perspective. Imagine a DH player whom you have never seen on the field. We can conclude that s/he is good without knowing his fielding ability (our function allows such) but once you start caring about tools (i.e. perspectives) ignored, your evaluation becomes more vague.
-\footnote{
-\begin{tabular}{lllllll}
-M        & P1 & P2 & P3 & P4 & P5 & D1  \\
-Fileding & +  & +  & +  & ?  & -  &     \\
-Hitting  & +  & -  & ?  & +  & -  &     \\
-Running  & +  & +  & +  & ?  & -  &     \\
-D2       &    &    &    &    &    &
-\end{tabular}
 
-{\Large $\Downarrow_{D^*}$}
 
-\begin{tabular}{llllll}
-$\Downarrow M$ & P1 & P2 & P3 & P4 & P5  \\
-As a whole                  & +  & ?  & +  & +  & -
-\end{tabular}
 
-}
+
+
 
 
 %\newthought{Return to Sorites.}
@@ -164,6 +172,29 @@ As a whole                  & +  & ?  & +  & +  & -
 %However, it is a different story to have a complete and sound structure of dimensions.
 
 \newthought{Return to Sorites.}
+Construct $\mathbf{M = D^* \times D^\#}$, with $\mathbf{D^*}$ evaluating by a certain person  and $\mathbf{D^\#}$ specifying the number of hair.
+
+\begin{table}
+\centering
+\begin{tabular}{llllllllllllllll}
+$\mathbf{M=}$ \\$ \mathbf{D^* \times D^\sharp}$    & 0 & 1 & 2 & ... & l & l+1 & ... & m & m+1 & ... & n & n+1 & ... & \begin{tabular}[c]{@{}l@{}}2,000,000\end{tabular} & $\mathbf{D^\#}$  \\
+You  & + & + & + & ... & + & +   & ... & + & +   & ... & + & +   & ... & -                                                   &                            \\
+Me   & + & + & + & ... & + & +   & ... & + & +   & ... & + & ?   & ... & -                                                   &                            \\
+Her  & + & + & + & ... & + & ?   & ... & ? & -   & ... & - & -   & ... & -                                                   &                            \\
+$\mathbf{D^*}$ &   &   &   &     &   &     &     &   &     &     &   &     &     &                                                     &
+\end{tabular}
+
+{\Large $\Downarrow_{D^*}$}
+
+
+
+\begin{tabular}{lllllllllllllllllll}
+$\mathbf{\Downarrow_{D^*}M}$       & 0 & 1 & 2 & ... & l & l+1 & ... & m & m+1     & ... & n       & n+1     & ... & 2,000,000 &  & $\mathbf{D^{\#}}$ &  &   \\
+Us  & + & + & + & ... & + & +   & ... & + & ? & ... & ? & ? & ... & -         &  &   &  &
+\end{tabular}
+
+\end{table}
+
 \begin{description}
 \itemsep0em
 
@@ -178,44 +209,25 @@ As a whole                  & +  & ?  & +  & +  & -
 \end{spacing}
 
 \item [Unwelcome conclusion avoided:]
-A man with $2,000,000$ hairs does not have to be bald.
-$\blacksquare$
+A person with 2,000,000 hairs does not have to be bald.
+$\square$
 \end{description}
 
-\begin{table}
-\centering
-\begin{tabular}{llllllllllllllll}
-$M=D^* \times D^\sharp$     & 0 & 1 & 2 & ... & m & m+1 & ... & n & n+1 & ... & m & m+1 & ... & \begin{tabular}[c]{@{}l@{}}2,000,000\end{tabular} & $D^\#$  \\
-You  & + & + & + & ... & + & +   & ... & + & +   & ... & + & +   & ... & -                                                   &                            \\
-Me   & + & + & + & ... & + & +   & ... & + & +   & ... & + & ?   & ... & -                                                   &                            \\
-Her  & + & + & + & ... & + & ?   & ... & ? & -   & ... & - & -   & ... & -                                                   &                            \\
-$D^*$ &   &   &   &     &   &     &     &   &     &     &   &     &     &                                                     &
-\end{tabular}
-
-{\Large $\Downarrow_{D^*}$}
-
-
-
-\begin{tabular}{lllllllllllllllllll}
-$\Downarrow_{D^*}M$       & 0 & 1 & 2 & ... & l & l+1 & ... & m & m+1     & ... & n       & n+1     & ... & 2,000,000 &  & $D^{\#}$ &  &   \\
-Us  & + & + & + & ... & + & +   & ... & + & +- & ... & +- & +- & ... & -         &  &   &  &
-\end{tabular}
-
-\end{table}
 
 Obvious bald/non-bald objects $x_0$ and $x_{2,000,000}$ are obviously so
-for $x_0 \subseteq \llbracket + \rrbracket^{M}$ and $x_2,000,000 \subseteq \llbracket - \rrbracket^{M}$. The same in $\Downarrow M$.
+for $x_0 \subseteq \llbracket + \rrbracket^{M}$ and $x_2,000,000 \subseteq \llbracket - \rrbracket^{M}$.
+The same holds even in the more ``limited'' model $\Downarrow M$.
 \footnote{$+$ is a shorthand for $B$ and $-$ for $\neg B$. }
-Tolerance still holds. Tolerance prohibits suddenly changing from bald to non-bald.
+\emph{Tolerance still holds.} Tolerance prohibits suddenly changing from bald to non-bald.
 We can construct bald $x_0$ and non-bald $x_{2,000,000}$
-by putting \emph{gaps} $\llbracket ? \rrbracket $ or \emph{guts} $\llbracket +- \rrbracket$.
+by putting $\llbracket ? \rrbracket$ in between.
 
 \newthought{Previous attempts seen dimensionally!}
 Previous solutions are special variants of our dimensional view.
-For one thing, epistemicists \cite{Williamson1994} highlights our epistemic ignorance, corresponding to ``too little to care'' or ``too much to care''.
-For another thing, supervaluationists
+For example, epistemicists \cite{Williamson1994} highlights our epistemic ignorance, corresponding to ``too little to care'' or ``too much to care''.
+For another instance, supervaluationists
 \cite{Keefe2000}
- would consider our $?$ as their ``truthvalue gap''.
+ would consider our $?$ as their ``truth value gap''.
 
 
 \pagebreak
