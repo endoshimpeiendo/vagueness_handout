@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.12.11)  14 NOV 2018 00:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.12.11)  14 NOV 2018 00:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -929,12 +929,7 @@ Overfull \hbox (122.0245pt too wide) in paragraph at lines 191--195
 LaTeX Warning: Marginpar on page 2 moved.
 
 
-Package natbib Warning: Citation `Williamson1994Vagueness' undefined on input l
-ine 207.
-
-
-Package natbib Warning: Citation `Keefe2000TheoriesVagueness' undefined on inpu
-t line 209.
+LaTeX Warning: Marginpar on page 2 moved.
 
 
 LaTeX Warning: Marginpar on page 2 moved.
@@ -948,12 +943,19 @@ e same identifier (name{cite.Hyde2011-HYDTSP}) has been already used, duplicate
 <to be read again> 
                    \relax 
 l.3 \bibitem{Hyde2011-HYDTSP}
+                             pdfTeX warning (ext4): destination with the same i
+dentifier (name{cite.Keefe2000}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.9 \bibitem{Keefe2000}
+                       pdfTeX warning (ext4): destination with the same identif
+ier (name{cite.Williamson1994}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.14 \bibitem{Williamson1994}
                              )
-
-Package natbib Warning: There were undefined citations.
-
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 217.
-[3]
+ [3]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 217.
  (./20181114_vagueness_handout.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 217.
@@ -964,10 +966,10 @@ ged.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 217.
  ) 
 Here is how much of TeX's memory you used:
- 14530 strings out of 493029
- 202271 string characters out of 6136233
- 309974 words of memory out of 5000000
- 17664 multiletter control sequences out of 15000+600000
+ 14534 strings out of 493029
+ 202283 string characters out of 6136233
+ 310138 words of memory out of 5000000
+ 17668 multiletter control sequences out of 15000+600000
  121196 words of font info for 229 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  46i,16n,45p,388b,526s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -985,7 +987,7 @@ ist/fonts/type1/public/stmaryrd/stmary10.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
 /palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/up
 lri8a.pfb>
-Output written on 20181114_vagueness_handout.pdf (3 pages, 124369 bytes).
+Output written on 20181114_vagueness_handout.pdf (3 pages, 124670 bytes).
 PDF statistics:
  88 PDF objects out of 1000 (max. 8388607)
  68 compressed objects within 1 object stream

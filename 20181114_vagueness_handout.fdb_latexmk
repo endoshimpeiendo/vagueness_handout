@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex 20181114_vagueness_handout"] 1542121854 "20181114_vagueness_handout.aux" "20181114_vagueness_handout.bbl" "20181114_vagueness_handout" 1542122527
+["bibtex 20181114_vagueness_handout"] 1542123174 "20181114_vagueness_handout.aux" "20181114_vagueness_handout.bbl" "20181114_vagueness_handout" 1542123176
   "/usr/share/texlive/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "20181114_vagueness_handout.aux" 1542121866 952 64f334f2d7fe4dc6cacaee4668d68597 ""
+  "20181114_vagueness_handout.aux" 1542123175 1001 a6ef9e36b94e8a5870c4f426e9161ddf ""
   "20181114_vagueness_handout.bcf" 0 -1 0 ""
   "Mendeley.bib" 1542121757 404045 d8e518f90fefdf4dbba9a649be7db92c ""
   (generated)
-  "20181114_vagueness_handout.blg"
   "20181114_vagueness_handout.bbl"
-["pdflatex"] 1542121866 "20181114_vagueness_handout.tex" "20181114_vagueness_handout.pdf" "20181114_vagueness_handout" 1542122527
+  "20181114_vagueness_handout.blg"
+["pdflatex"] 1542123175 "20181114_vagueness_handout.tex" "20181114_vagueness_handout.pdf" "20181114_vagueness_handout" 1542123176
   "/dev/null" 1542092306 0 d41d8cd98f00b204e9800998ecf8427e ""
   "/etc/texmf/web2c/texmf.cnf" 1512976838 1101 af7716885e081ab43982cab7b4672c1a ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -172,13 +172,13 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1503343927 31343 93828589fb0cea665e553ee5a17ad2d4 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1512976978 1863403 f3ff9a4253bcb5fb9a9baaf0c572cb01 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1512977080 3854585 5dd5898239ca2727deacfc98a142c5b8 ""
-  "20181114_vagueness_handout.aux" 1542121866 952 64f334f2d7fe4dc6cacaee4668d68597 ""
-  "20181114_vagueness_handout.bbl" 1542121854 230 4f8d9e8de9c924d74879bb1f3cd2b895 "bibtex 20181114_vagueness_handout"
-  "20181114_vagueness_handout.out" 1542121866 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "20181114_vagueness_handout.tex" 1542122527 9462 3e82d0f6fd8f12f61d9c3863bf7239b0 ""
+  "20181114_vagueness_handout.aux" 1542123175 1001 a6ef9e36b94e8a5870c4f426e9161ddf ""
+  "20181114_vagueness_handout.bbl" 1542123174 441 26a5d0b72ddb4ff468bef881447532d7 "bibtex 20181114_vagueness_handout"
+  "20181114_vagueness_handout.out" 1542123175 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "20181114_vagueness_handout.tex" 1542123175 9436 144397c7d69bde5a1dad1540a4fcb06d ""
   "kpsewhich -var-value=max_print_line" 0 -1 0 ""
   (generated)
+  "20181114_vagueness_handout.aux"
   "20181114_vagueness_handout.log"
   "20181114_vagueness_handout.out"
-  "20181114_vagueness_handout.aux"
   "20181114_vagueness_handout.pdf"
