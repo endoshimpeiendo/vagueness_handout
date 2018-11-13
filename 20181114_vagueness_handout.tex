@@ -38,6 +38,7 @@
 
 \title{{\bf{A Dimensional View towards Vagueness} } % Title
 \thanks{A talk for Logic and Engineering of Natural Language Semantics 15 (LENLS 15), Hiyoshi Campus of Keio University, Yokohama, Japan. }
+%\thanks{The latest version of this handout \url{www.something.org} and the draft \url{www.otherthings.org} are available online and welcoming comments and suggestions!}
 }
  % Subtitle
 
@@ -59,66 +60,155 @@ My main interests are metaphysics and logic(s), particularly, modal realism and 
 
 \begin{abstract}
 We should see \emph{vagueness} from a \emph{dimensional} perspective.
-I argue that my solution is good but do not claim that others are wrong.
-Rather, my dimensional view provides a formal platform on which discussions make sense.
+I argue that my solution is good but do \emph{not} claim that others are wrong.
+Rather, my dimensional view provides a formal platform on which the disputes are possible.
+
+\noindent \textbf{Keywords:} vagueness, sorites, dimensions
 \end{abstract}
 
-\newthought{Vagueness and sorites paradox revisited.}
+\newthought{Vagueness revisited.}
 Most verbal expressions are vague.
-You need to face vagueness at least when you want to analyze languages via logic. An ordinal predicate such as ``is bald'' or ``is a heap'' leads to a well known paradox called \emph{sorites paradox}.
-
-\newthought{What is Sorites paradox
-\footnote{Also known as paradox of heaps, paradox of baldman or \emph{little-by-little argument}. Although each of these clauses seems to be plausible, combining them leads to a contradiction.
+ An ordinal predicate such as ``is bald'' or ``is a heap'' leads to a well known paradox called \emph{sorites paradox}.
+\footnote{Also known as paradox of heaps, paradox of baldman or \emph{little-by-little argument}. Combining these seemingly plausible assumtoions leads to a contradiction. See:
+\cite{Hyde2011-HYDTSP}
+%\cite{Sainsbury1995}
 }
-?}
+\footnote{Sorites paradox matters when you analyze natural languages via logic or logical structure in natural languages. }
+
 
 \begin{description}
 \itemsep0em
-\item	[Obviously bald case:] $M \vDash B(0)$. A man with no hair is surely bald
-\footnote{
-$M$ is an arbitrary model. $M \vDash \phi$ is read as $\phi$ holds under a model $M$.
-We employ a language which only contains a baldness property $B$. $B(x)$ is read as "$x$ is bald".
-}.
-\item	[Obviously non-bald case:] $M \vDash \neg B (2,000,000)$.
-\emph{A man with 200000 hairs is surely \emph{not} bald.}
 
-\item	[\emph{Tolerance Principle}:] If $M \vDash x \sim_{B} y$ and $M \vDash B(x)$, then $M \vDash B(y)$.
-\emph{If two things $x$ and $y$ are indifferent (i.e. similar) to each other with respect to a property $B$, then $B(x)$ promises $B(y)$.
-\footnote{
-With $B$ a property,
-$x \sim_{B} y$ iff $\vDash B(x) \Leftrightarrow \vDash B(y)$ read as "x is similar to y with respect to B-ness".
-Its negation is defined as follows: $x \not \sim_{B} y$ if and only if  $\vDash B(x) \not \Leftrightarrow \vDash B(y)$.
-}
-}
+\item	[Obviously non-bald case:] A man with 200000 hairs is surely \emph{not} bald.
 
-\item	[Bridge:] $M \vDash \exists 0 \exists 1, ... , \exists i_{\in I}, ... \exists 2,000,000
-:
-0$
-$\sim_{B} 1 \sim_{B} ... \sim_{B} 1,999,999 \sim_{B} 2,000,000$.
-\emph{There exists a stream of similarity relation from a small enough ($0$) to a large enough ($2,000,000$).}
+\item	[Obviously bald case:] A man with no hair is surely bald
+
+\item	[Tolerance Principle:]
+Pulling or adding a single hair does not effect baldness.
 
 \noindent\rule{10cm}{0.4pt}
 
-\item [Unwelcome conclusion] $\vDash \neg B (2,000,000)$  .
-\emph{A man with 20000 hairs turns out to be bald.}
+\item [Unwelcome conclusion:]
+A man with $2,000,000$ hairs is bald.
 $\blacksquare$
 
 \end{description}
 
-\newthought{Many solutions have been suggested} for sorites paradox.
-To name a few popular ones:
-\emph{Epistemicists} (e.g. Williamson) points out that tolerance assumption is questionable: i.e. there exists a threshold but we have epistemic limitation to know where it is.
-\emph{Supervaluationists} (e.g. Fine) rather revises the \emph{logic} working behind it, accepting truth-value \emph{gap}.
-
-\newthought{See things dimensionally.}
+\newthought{My solution: See things dimensionally.}
+\footnote{Many solutions have been suggested.
+I do not argue that they are all wrong and mine is the only possible or the most plausible one. Instead, my dimensional understanding is expected to describe and embrace these different opinions.}
 We are already familiar with the dimensional perspective.
 We see things not directly in a three-dimensioal structure but in a two-dimensinoal structure (as our retina does).
 
-\newthough{Formalization.}
+\newthought{Formalization.}
+Technically speaking, absence and abundance of information are written in terms of \emph{projection functions} on a dimensional structure.
 
-\newthought{Let us do some baseball.}
+\begin{definition}[Dimensional structure]
+Let $X_i$ a space (set).
+A dimensional structure $M$ is defined as follows:
+\[
+M^{i} = \prod_{i \in I} X_i.
+\]
+\end{definition}
+
+\begin{definition}[Predicates and objects]
+Let $P \in PRED$ be a predicate and $x \in OBJ$ be an object.
+Within a dimensional structure $M$,
+a predicate $P$ is a subset of $M$, written as $\llbracket P \rrbracket^{M} \subseteq M$ and an object $x$ is a element of $M$, $x \subseteq M$.
+\end{definition}
+
+\begin{definition}[Projection]
+Fix $j \in I$. Note $x = \{x_0 \in X_0, x_1 \in X_1, ... , x_j \in X_j, ...\}$.
+Consider a dimensional structure $M^{i} = \prod_i X_i$.
+Pick an arbitrary $j \in I$.
+A projection $f_j: M \mapsto \Downarrow_j M$ returns $f_{j}(x)= \Downarrow_{j}x = \{x_0 \in X_0, x_1 \in X_1, ... , x_{j-1} \in X_{j-1}, x_{j+1} \in X_{j+1}, ...\}$.
+\end{definition}
+
+\begin{definition}[Evaluation]
+$M \models P(x)$ (read: ``x is P'' is true under the interpretation $M$) if and only if $x \subseteq ||P||$.
+\end{definition}
+
+\newthought{Demonstration: baseball.}
+We reach vagueness when we consider too little (\emph{absence})
+\footnote{Suppose a great batter but horrible field player. If we evaluate her/him as a whole, according to our function, s/he is both good and non-good.}
+ and when we consider too much (\emph{abundance}).
+\footnote{Our (once fixed) evaluation is often cancelled after considering another perspective. Imagine a DH player whom you have never seen on the field. We can conclude that s/he is good without knowing his fielding ability (our function allows such) but once you start caring about tools (i.e. perspectives) ignored, your evaluation becomes more vague.
+}
+
+
+\begin{table}
+\begin{tabular}{lllllll}
+M        &   &   &   &   &  & D\_1  \\
+Fileding & + & + & + & - &  &       \\
+Hitting  & + & - & ? & - &  &       \\
+Running  & + & + & + & - &  &       \\
+         &   &   &   &   &  &       \\
+D\_2     &   &   &   &   &  &
+\end{tabular}
+\end{table}
+
+
+
+%\newthought{Return to Sorites.}
+%We may consider too little: the number of hair is just one of many possible \emph{dimensions}, which can be insufficient to determine bald or non-bald by itself. In the setting of paradox, the number of hair is just used to specify each object. We need to consult extra dimensions to evaluate each object's baldness.
+%Or, we may consider too much: adding new dimensions does not necessarily help to expell vagueness.
+%Obvious cases suppose that for these apparent cases (no hair at all or apparetnly many hairs) for a given structure $M^i$ containing $i$ dimensions.
+%However, such a set $M^{i}$ does not necessarily offer a sufficient and non-confusing information for less ideal cases between $0$ and $2000000$.
+%Note that the dimensional view is compatible with the bridge clause.
+%We can keep that for each $n$, $M^{i} \models n \sim_B n+1$ (bridge).
+%However, it is a different story to have a complete and sound structure of dimensions.
 
 \newthought{Return to Sorites.}
+\begin{description}
+\itemsep0em
+
+\item	[Obviously non-bald case:] $M \models \neg B (x_{2,000,000})$
+\item	[Obviously bald case:] $M \models B (x_{0})$
+
+\item	[Tolerance Principle:] There are \emph{no} $x_{n}$ and $x_{n+1}$ such that $M \models B(x_{n}) $ and $M \models \neg B (x_{n+1})$
+
+\noindent\rule{10cm}{0.4pt}
+
+\item [Unwelcome conclusion avoided:]
+A man with $2,000,000$ hairs does not have to be bald.
+$\blacksquare$
+\end{description}
+
+\begin{table}
+\centering
+\begin{tabular}{llllllllllllllll}
+$M=D^* \times D^\sharp$     & 0 & 1 & 2 & ... & m & m+1 & ... & n & n+1 & ... & m & m+1 & ... & \begin{tabular}[c]{@{}l@{}}2,000,000\end{tabular} & $D^\#$  \\
+You  & + & + & + & ... & + & +   & ... & + & +   & ... & + & +   & ... & -                                                   &                            \\
+Me   & + & + & + & ... & + & +   & ... & + & +   & ... & + & ?   & ... & -                                                   &                            \\
+Her  & + & + & + & ... & + & ?   & ... & ? & -   & ... & - & -   & ... & -                                                   &                            \\
+$D^*$ &   &   &   &     &   &     &     &   &     &     &   &     &     &                                                     &
+\end{tabular}
+
+{\Large $\Downarrow_{D^*}$}
+
+
+
+\begin{tabular}{lllllllllllllllllll}
+$\Downarrow_{D^*}M$       & 0 & 1 & 2 & ... & l & l+1 & ... & m & m+1     & ... & n       & n+1     & ... & 2,000,000 &  & $D^{\#}$ &  &   \\
+Us  & + & + & + & ... & + & +   & ... & + & +- & ... & +- & +- & ... & -         &  &   &  &
+\end{tabular}
+
+\end{table}
+
+Obvious bald/non-bald objects $x_0$ and $x_{2,000,000}$ are obviously so
+for $x_0 \subseteq \llbracket + \rrbracket^{M}$ and $x_2,000,000 \subseteq \llbracket - \rrbracket^{M}$. The same in $\Downarrow M$.
+\footnote{$+$ is a shorthand for $B$ and $-$ for $\neg B$. }
+Tolerance still holds. Tolerance prohibits suddenly changing from bald to non-bald.
+We can construct bald $x_0$ and non-bald $x_{2,000,000}$
+by putting \emph{gaps} $\llbracket ? \rrbracket $ or \emph{guts} $\llbracket +- \rrbracket$.
+
+\newthought{Previous attempts seen dimensionally!}
+Previous solutions are special variants of our dimensional view.
+For one thing, epistemicists \cite{Williamson1994Vagueness} highlights our epistemic ignorance, corresponding to ``too little to care'' or ``too much to care''.
+For another thing, supervaluationists
+\cite{Keefe2000TheoriesVagueness}
+ would consider our $?$ as their ``truthvalue gap''.
+
 
 \pagebreak
 
