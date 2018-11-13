@@ -28,6 +28,7 @@
 \usepackage{tabularx}
 \usepackage{ marvosym }
 \usepackage{enumitem}
+\usepackage{setspace}
 
 \newtheorem{definition}{Definition}
 
@@ -84,9 +85,11 @@ Most verbal expressions are vague.
 \item	[Obviously bald case:] A man with no hair is surely bald
 
 \item	[Tolerance Principle:]
-Pulling or adding a single hair does not effect baldness.
+Pulling a single hair does not effect baldness.
+\begin{spacing}{0}
 
 \noindent\rule{10cm}{0.4pt}
+\end{spacing}
 
 \item [Unwelcome conclusion:]
 A man with $2,000,000$ hairs is bald.
@@ -106,8 +109,7 @@ Technically speaking, absence and abundance of information are written in terms 
 \begin{definition}[Dimensional structure]
 Let $X_i$ a space (set).
 A dimensional structure $M$ is defined as follows:
-\[
-M^{i} = \prod_{i \in I} X_i.
+\[M^{i} = \prod_{i \in I} X_i.
 \]
 \end{definition}
 
@@ -125,28 +127,31 @@ A projection $f_j: M \mapsto \Downarrow_j M$ returns $f_{j}(x)= \Downarrow_{j}x 
 \end{definition}
 
 \begin{definition}[Evaluation]
-$M \models P(x)$ (read: ``x is P'' is true under the interpretation $M$) if and only if $x \subseteq ||P||$.
+$M \models P(x)$ if and only if $x \subseteq \llbracket P \rrbracket$.
 \end{definition}
 
 \newthought{Demonstration: baseball.}
 We reach vagueness when we consider too little (\emph{absence})
-\footnote{Suppose a great batter but horrible field player. If we evaluate her/him as a whole, according to our function, s/he is both good and non-good.}
+Suppose a great batter but horrible field player. If we evaluate her/him as a whole, according to our function, s/he is both good and non-good.
  and when we consider too much (\emph{abundance}).
-\footnote{Our (once fixed) evaluation is often cancelled after considering another perspective. Imagine a DH player whom you have never seen on the field. We can conclude that s/he is good without knowing his fielding ability (our function allows such) but once you start caring about tools (i.e. perspectives) ignored, your evaluation becomes more vague.
-}
-
-
-\begin{table}
+Our (once fixed) evaluation is often cancelled after considering another perspective. Imagine a DH player whom you have never seen on the field. We can conclude that s/he is good without knowing his fielding ability (our function allows such) but once you start caring about tools (i.e. perspectives) ignored, your evaluation becomes more vague.
+\footnote{
 \begin{tabular}{lllllll}
-M        &   &   &   &   &  & D\_1  \\
-Fileding & + & + & + & - &  &       \\
-Hitting  & + & - & ? & - &  &       \\
-Running  & + & + & + & - &  &       \\
-         &   &   &   &   &  &       \\
-D\_2     &   &   &   &   &  &
+M        & P1 & P2 & P3 & P4 & P5 & D1  \\
+Fileding & +  & +  & +  & ?  & -  &     \\
+Hitting  & +  & -  & ?  & +  & -  &     \\
+Running  & +  & +  & +  & ?  & -  &     \\
+D2       &    &    &    &    &    &
 \end{tabular}
-\end{table}
 
+{\Large $\Downarrow_{D^*}$}
+
+\begin{tabular}{llllll}
+$\Downarrow M$ & P1 & P2 & P3 & P4 & P5  \\
+As a whole                  & +  & ?  & +  & +  & -
+\end{tabular}
+
+}
 
 
 %\newthought{Return to Sorites.}
@@ -167,7 +172,10 @@ D\_2     &   &   &   &   &  &
 
 \item	[Tolerance Principle:] There are \emph{no} $x_{n}$ and $x_{n+1}$ such that $M \models B(x_{n}) $ and $M \models \neg B (x_{n+1})$
 
+\begin{spacing}{0}
+
 \noindent\rule{10cm}{0.4pt}
+\end{spacing}
 
 \item [Unwelcome conclusion avoided:]
 A man with $2,000,000$ hairs does not have to be bald.
